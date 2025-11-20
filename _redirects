@@ -1,0 +1,8 @@
+# Netlify redirects file
+# This allows for cleaner URLs and shortcuts
+
+/book              /booking.html           301
+/contact-us        /contact.html           301
+/photos            /gallery.html           301
+/questions         /faqs.html              301
+/areas             /service-area.html      301

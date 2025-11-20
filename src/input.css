@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-belle-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-belle-gold text-white px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-belle-gold text-belle-gold px-8 py-3 rounded-md font-semibold hover:bg-belle-gold hover:text-white transition-all duration-200;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-16 md:py-24;
+  }
+
+  /* Hero background image utility */
+  .hero {
+    position: relative;
+    color: #ffffff;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%), url('/assets/images/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  /* Ensure direct children render above the background even without a wrapper */
+  .hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 1px rgba(255,255,255,0.15) inset;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 56rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      min-height: 80vh;
+    }
+
+    .hero-content {
+      padding: 4rem 3.5rem;
+    }
+  }
+}

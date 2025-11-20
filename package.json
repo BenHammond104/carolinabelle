@@ -1,0 +1,15 @@
+{
+  "name": "carolina-belle-trolley",
+  "version": "1.0.0",
+  "description": "Wedding trolley website for The Carolina Belle Trolley Co.",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": ["wedding", "trolley", "anderson", "sc"],
+  "author": "The Carolina Belle Trolley Co.",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

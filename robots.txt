@@ -1,0 +1,6 @@
+# Robots.txt for The Carolina Belle Trolley Co.
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://carolinabelletrolley.com/sitemap.xml

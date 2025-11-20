@@ -1,0 +1,29 @@
+# Netlify configuration for Carolina Belle Trolley website
+
+[build]
+  publish = "."
+  command = "npm run build"
+
+# Redirect rules (optional - for future use)
+[[redirects]]
+  from = "/book"
+  to = "/booking.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact.html"
+  status = 301
+
+# Form submission settings
+[build.environment]
+  NODE_VERSION = "18"
+
+# Headers for security (optional but recommended)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
