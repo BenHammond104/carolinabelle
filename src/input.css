@@ -39,7 +39,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%), url('/assets/images/hero.jpeg');
+    background: linear-gradient(135deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%), url('../assets/images/hero.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
